@@ -8,3 +8,5 @@ type Book = {
     author: string;
     publcationYear: number;
 };
+
+export {Book};
