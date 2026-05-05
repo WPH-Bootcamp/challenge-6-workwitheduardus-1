@@ -6,7 +6,7 @@
 type Book = {
     title: string;
     author: string;
-    publcationYear: number;
+    publicationYear: number;
 };
 
 export {Book};
