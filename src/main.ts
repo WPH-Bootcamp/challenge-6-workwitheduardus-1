@@ -6,6 +6,7 @@
 //   3. Uji fungsi listBooks untuk melihat semua data
 //   4. Uji fungsi searchBook dengan dan tanpa parameter
 // Silakan bereksplorasi untuk memastikan semua fungsi berjalan dengan baik
+import { addBook, listBooks, searchBook } from "./functions/bookManager";
 
 console.log("Book Management Application - Week 6");
 console.log("=====================================");
