@@ -34,4 +34,29 @@ function listBooks(): void {
 // Parameter title bersifat opsional (bisa ada atau tidak)
 // Fungsi ini tidak mengembalikan nilai (void)
 // Petunjuk: jika parameter title diberikan, cari buku yang cocok
-//           jika tidak diberikan, tampilkan semua buku atau berikan informasi yang sesuai
+// jika tidak diberikan, tampilkan semua buku atau berikan informasi yang sesuai
+
+function searchBook(title?: string): void {
+    if (title === undefined) {
+        console.log("Judul buku tidak diberikan. Menampilkan semua buku:")
+        listBooks();
+        return;
+    }
+
+    const keyword = title.toLowerCase();
+    const hasil = books.filter((buku) => buku.title.toLowerCase().includes(keyword));
+
+    if (hasil.length === 0) {
+        console.log(`Buku dengan judul "${title}" tidak ditemukan`);
+        return;
+    }
+
+    console.log(`=== Hasil pencarian untuk "${title}" ===`);
+    for (let i = 0; i < hasil.length; i++) {
+        const buku = hasil[i];
+        console.log(`${i + 1}. "${buku.title}" - ${buku.author} (${buku.publicationYear})`);
+    }
+    console.log(`Ditemukan ${hasil.length} buku`);
+}
+
+export { addBook, listBooks, searchBook };
