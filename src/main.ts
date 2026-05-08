@@ -13,8 +13,8 @@ console.log("=====================================");
 
 // Mulai pengujian di bawah ini
 
-// 1. Tmabah Data Buku
-console.log("1. Tambah fungsi addBook");
+// 1. Tambah Data Buku
+console.log("--- 1. Tambah fungsi addBook ---");
 addBook({
   title: "Let Them",
   author: "Mel Robbins",
@@ -42,18 +42,17 @@ addBook({
 });
 
 // 2. Fungsi List Books
-console.log("2. Tampilkan semua buku dengan fungsi listBooks");
+console.log("--- 2. Tampilkan semua buku dengan fungsi listBooks ---");
 listBooks();
 
 // 3. Fungsi Search Books
-console.log("3. Cari buku dengan judul 'Atomic Habits'");
+console.log("--- 3. Cari buku dengan judul 'Atomic Habits' ---");
 searchBook("Atomic Habits");
 
-// 4. Cari Fungsi Search Books dengan parameter
-console.log("4. Cari buku dengan penulis 'James Clear'");
+// 4. Cari Search Books dengan parameter yang tidak ada
+console.log("--- 4. Cari buku dengan penulis 'James Clear' ---");
 searchBook("James Clear");
-searchBook("Book");
 
 // 5. Cari Fungsi Search Books tanpa parameter
-console.log("5. Cari buku tanpa parameter (tampilkan semua buku)");
+console.log("--- 5. Cari buku tanpa parameter (tampilkan semua buku) ---");
 searchBook();
